@@ -1,0 +1,100 @@
+:root{
+    --error-red-color: #D25352;
+    --almost-black: #1E1E1E;
+    --board-bg-color:var(--off-white);
+    --grid-color: #c2cdd1;
+    --emphasis-color: #FE8B24;
+    --off-white: #FBF8EB;
+    --tile-fill-color:#dceaf8;
+}
+
+body{
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    background: var(--off-white);
+}
+
+hr{
+    width: 50vw;
+}
+#errors{
+    color: var(--error-red-color);
+    font-size: 24px;
+}
+
+#board{
+    width: 450px;
+    height: 450px;
+    background: var(--board--color);
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+#digits{
+    width: 50vw;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--almost-black);
+    justify-content: center;
+}
+
+.tile{
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--grid-color);
+
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number{
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--almost-black);
+    border-radius: 10%;
+    background: #136F63;
+    color: var(--off-white);
+
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+
+.number-selected{
+    background: var(--grid-color);
+}
+
+.tile-start{
+    background: var(--tile-fill-color);
+}
+
+.horizontal-line{
+    border-bottom: 1px solid var(--almost-black);
+}
+.vertical-line{
+    border-right: 1px solid var(--almost-black);
+}
+
+.tile:hover{
+    background: var(--emphasis-color);
+    color: var(--off-white);
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
